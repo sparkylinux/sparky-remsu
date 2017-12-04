@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Dependencies:
 -------------
-gksu | kdesudo
+gksu | lxqt-sudo | kdesudo
 sysvinit-utils
 
 Install:

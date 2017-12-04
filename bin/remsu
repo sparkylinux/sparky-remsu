@@ -6,7 +6,7 @@
 #
 # Separately debianized for SparkyLinux by Paweł "pavroo' Pijanowski
 # Copyright 2012-2017 under the GNU GPL2 License
-# Last update 2017/01/02
+# Last update 2017/12/04
 
 #testmode=`grep "1000" /etc/passwd | grep -v "Live"`
 
@@ -24,10 +24,30 @@
 #	fi
 #fi
 
-if [ $(pidof kwin) ] || [ $(pidof kwin_x11) ] && [ -f /usr/bin/kdesudo ]; then
-	kdesudo "$@"
+# kde
+if [ $(pidof kwin) ] || [ $(pidof kwin_x11) ]; then
+	if [ -f /usr/bin/kdesudo ]; then
+		kdesudo "$@"
+	elif [ -f /usr/bin/gksudo ]; then
+		gksudo "$@"
+	fi
+# tde
 elif [ $(pidof twin) ] && [ -f /usr/bin/kdesudo ]; then
 	kdesudo "$@"
+
+# openbox
+elif [ $(pidof openbox) ] && [ -f /usr/bin/obmenu-generator ]; then
+	gksudo "$@"
+
+# lxqt
+elif [ $(pidof openbox) ] && [ -f /usr/bin/startlxqt ]; then
+	if [ -f /usr/bin/lxqt-sudo ]; then
+		lxqt-sudo "$@"
+	fi
+
+# others
 else
 	gksudo "$@"
 fi
+
+exit 0
