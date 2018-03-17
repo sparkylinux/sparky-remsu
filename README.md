@@ -1,8 +1,7 @@
-sudo/su frontend
-This small tool lets you run Sparky apps with root privileges using gksudo or kdesudo. It is based on Remastersys remsu script.
+sudo/su authorization frontend
+This small tool lets you run Sparky apps with pkexec as a graphical frontend for PolicyKit. It allows an authorized user to execute PROGRAM as another user.
 
-Copyright (C) 2007,2008,2009 Tony Brijeski
-Copyright (C) 2012-2017 Paweł Pijanowski
+Copyright (C) 2012-2018 Paweł Pijanowski
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,8 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Dependencies:
 -------------
-gksu | lxqt-sudo | kdesudo
-sysvinit-utils
+policykit-1
 
 Install:
 -------------
