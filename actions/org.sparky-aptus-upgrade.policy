@@ -6,7 +6,7 @@
 
   <action id="org.sparky-aptus-upgrade">
     <message>Authentication is required to run Sparky APTus Upgrade</message>
-    <icon_name>/usr/share/icons/sparky/upgrade/aptus-upgrade.png</icon_name>
+    <icon_name>system-software-install</icon_name>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
