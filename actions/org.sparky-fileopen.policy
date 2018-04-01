@@ -4,15 +4,15 @@
  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 <policyconfig>
 
-  <action id="org.sparky-users">
-    <message>Authentication is required to run Sparky Users</message>
-    <icon_name>contact-new</icon_name>
+  <action id="org.sparky-fileopen">
+    <message>Authentication is required to run Sparky File Open</message>
+    <icon_name>system-file-manager</icon_name>
     <defaults>
       <allow_any>auth_admin</allow_any>
       <allow_inactive>auth_admin</allow_inactive>
       <allow_active>auth_admin</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/sparky-users</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/sparky-fileopen</annotate>
     <annotate key="org.freedesktop.policykit.exec.allow_gui">true</annotate>
   </action>
 
