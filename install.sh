@@ -22,6 +22,7 @@ if [ "$1" = "uninstall" ]; then
 	rm -f /usr/share/polkit-1/actions/org.lightscribe-*
 	rm -f /usr/share/polkit-1/actions/org.teamspeak-*
 	rm -f /usr/share/polkit-1/actions/org.teamviewer-*
+	rm -f /usr/share/polkit-1/actions/org.calamares*
 else
 	cp bin/* /usr/bin/
 	cp actions/* /usr/share/polkit-1/actions/
