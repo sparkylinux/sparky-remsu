@@ -16,6 +16,7 @@
 
 if [ "$1" = "uninstall" ]; then
 	rm -f /usr/bin/remsu
+	rm -f /usr/bin/sparky-xterm-exec
 	rm -f /usr/share/polkit-1/actions/org.sparky*
 	rm -f /usr/share/polkit-1/actions/org.custom-iso-builder.*
 	rm -f /usr/share/polkit-1/actions/org.deb-package-builder.*

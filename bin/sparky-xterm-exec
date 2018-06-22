@@ -1,0 +1,66 @@
+#!/bin/bash
+
+# Copyright Paweł "pavroo" Pijanowski 2018
+# under the GNU GPL2 License
+# Last update 2018/06/20
+
+testroot="`whoami`"
+if [ "$testroot" != "root" ]; then
+	echo "Must be root... Exiting..."
+fi
+
+if [ -f /usr/bin/sparky-xterm ];then
+	SPARKYXTERM="/usr/bin/sparky-xterm"
+else
+	echo "sparky-xterm is missing... Exiting..."
+	exit 1
+fi
+
+case $1 in
+### terminal apps
+  cfdisk)
+	$SPARKYXTERM cfdisk
+     ;;
+  clonezilla)
+	$SPARKYXTERM clonezilla
+     ;;
+  gsmartcontrol)
+	$SPARKYXTERM gsmartcontrol
+     ;;
+  mc)
+	$SPARKYXTERM mc
+     ;;
+  photorec)
+	$SPARKYXTERM photorec
+     ;;
+  testdisk)
+	$SPARKYXTERM testdisk
+     ;;
+### gui apps
+  boot-repair)
+	boot-repair 
+     ;;
+  disk-manager)
+	disk-manager
+     ;;
+  redobackup)
+	redobackup 
+     ;;
+  system-config-lvm)
+	system-config-lvm 
+     ;;
+  tuxcmd)
+	tuxcmd 
+     ;;
+  lxterminal)
+	lxterminal
+     ;;
+  uxterm)
+	uxterm 
+     ;;
+  xterm)
+	xterm 
+     ;;
+esac
+
+exit 0
