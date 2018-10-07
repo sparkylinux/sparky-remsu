@@ -2,7 +2,7 @@
 
 # Copyright Paweł "pavroo" Pijanowski 2018
 # under the GNU GPL2 License
-# Last update 2018/06/20
+# Last update 2018/10/05
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
@@ -42,6 +42,9 @@ case $1 in
      ;;
   disk-manager)
 	disk-manager
+     ;;
+  gparted)
+	gparted
      ;;
   redobackup)
 	redobackup 
