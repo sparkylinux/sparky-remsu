@@ -1,7 +1,7 @@
 sudo/su authorization frontend
 This small tool lets you run Sparky apps with pkexec as a graphical frontend for PolicyKit. It allows an authorized user to execute PROGRAM as another user.
 
-Copyright (C) 2012-2018 Paweł Pijanowski
+Copyright (C) 2012-2020 Paweł Pijanowski
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
