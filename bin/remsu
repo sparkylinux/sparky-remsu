@@ -4,6 +4,6 @@
 # under the GNU GPL2 License
 # Last update 2020/04/15
 
-pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY "$@"
+pkexec "$@"
 
 exit 0
