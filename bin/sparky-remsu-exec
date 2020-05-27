@@ -2,11 +2,12 @@
 
 # Copyright Paweł "pavroo" Pijanowski 2018
 # under the GNU GPL2 License
-# Last update 2018/10/05
+# Last update 2020/05/27
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
 	echo "Must be root... Exiting..."
+	exit 1
 fi
 
 if [ -f /usr/bin/sparky-xterm ];then
@@ -23,9 +24,6 @@ case $1 in
      ;;
   clonezilla)
 	$SPARKYXTERM clonezilla
-     ;;
-  gsmartcontrol)
-	$SPARKYXTERM gsmartcontrol
      ;;
   mc)
 	$SPARKYXTERM mc
@@ -46,6 +44,9 @@ case $1 in
   gparted)
 	gparted
      ;;
+  gsmartcontrol)
+	gsmartcontrol
+     ;;
   redobackup)
 	redobackup 
      ;;
@@ -57,6 +58,9 @@ case $1 in
      ;;
   lxterminal)
 	lxterminal
+     ;;
+   spterm)
+	spterm 
      ;;
   uxterm)
 	uxterm 
