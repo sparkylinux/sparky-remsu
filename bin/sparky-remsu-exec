@@ -2,7 +2,7 @@
 
 # Copyright Paweł "pavroo" Pijanowski 2018
 # under the GNU GPL2 License
-# Last update 2020/05/27
+# Last update 2020/11/02
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
@@ -24,6 +24,9 @@ case $1 in
      ;;
   clonezilla)
 	$SPARKYXTERM clonezilla
+     ;;
+  iotop)
+	$SPARKYXTERM iotop
      ;;
   mc)
 	$SPARKYXTERM mc
