@@ -2,7 +2,7 @@
 
 # Copyright Paweł "pavroo" Pijanowski 2018
 # under the GNU GPL2 License
-# Last update 2020/11/02
+# Last update 2020/12/12
 
 testroot="`whoami`"
 if [ "$testroot" != "root" ]; then
@@ -52,6 +52,9 @@ case $1 in
      ;;
   redobackup)
 	redobackup 
+     ;;
+  rescuezilla)
+	rescuezilla 
      ;;
   system-config-lvm)
 	system-config-lvm 
